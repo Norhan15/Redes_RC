@@ -7,10 +7,8 @@ require('dotenv').config();
 const app = express();
 const port = 3000;
 
-// Configurar body-parser para manejar JSON
 app.use(bodyParser.json());
 
-// Configurar la conexión a MySQL
 const db = mysql.createConnection({
     user: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
